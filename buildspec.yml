@@ -4,8 +4,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login --region us-east-2)
-      - REPOSITORY_URI=https://github.com/kkebabci/tweetanalyser.git
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - REPOSITORY_URI=047431544069.dkr.ecr.eu-central-1.amazonaws.com/tweetanalyser
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
