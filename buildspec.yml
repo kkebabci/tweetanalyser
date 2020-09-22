@@ -29,3 +29,4 @@ phases:
 artifacts:
     files: 
       - target/tweetanalyser-0.0.1-SNAPSHOT.jar
+      - taskdefinition.json
