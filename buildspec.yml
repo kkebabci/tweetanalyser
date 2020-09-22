@@ -25,7 +25,7 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing definitions file...
-      - printf '[{"name":"default","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > taskdefinition.json
+      - printf '[{"name":"custom-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > taskdefinition.json
 artifacts:
     files: 
       - target/tweetanalyser-0.0.1-SNAPSHOT.jar
